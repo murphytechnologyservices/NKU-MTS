@@ -1,30 +1,30 @@
 <?php
-
+include('functions.php');
 class User {
+
     // Attributes / Properties
-    public $userID;
-    private $database;
     private $username;
+    private $userid;
+    private $database;
     
-    function __construct($userID, $database) {
-        $this->userID = $userID;
+   public function __construct($userid, $database) {
+        $this->userid = $userid;
         $this->database = $database;
-
-        $sql = file_get_contents('sql/getUser.sql');
-        $params = array(
-            'userid' =>$this->userID
-        );
-        $statement = $database->prepare($sql);
-        $statement->execute($params);
-        $users = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-        $user = $users[0];
-        $this->username = $user['name'];
-        
+        $this->getFromDatabase();
     }
     
-    function getusername() {
+    private function getFromDatabase(){
+		$users = getUser($this->userid,$this->database);
+		$this->username = $users[0]['username'];
+	}
+    
+   public function getusername() {
         return $this->username;
 }
-    
+ 
+    public function getuserid() {
+        return $this->userid;
 }
+}
+
+?>

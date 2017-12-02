@@ -4,7 +4,7 @@
 include('config.php');
 
 // Include functions for application
-include('functions.php');
+//include('functions.php');
 
 // Destroy the current session
 session_destroy();

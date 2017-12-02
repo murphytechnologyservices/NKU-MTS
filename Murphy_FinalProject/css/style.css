@@ -1,8 +1,16 @@
 body {
 	background: url('../images/background.jpg');
-	background-repeat: repeat-x;
+	background-size: cover;
 	box-sizing: border-box;
 	font-family: arial;
+}
+
+footer {
+	max-width: 1100px;
+	margin: 10px auto;
+	/*background-color: white; */
+	padding: 20px 30px;
+    border-top: 1px solid #ededed;
 }
 
 * {
@@ -12,9 +20,9 @@ body {
 }
 
 .page {
-	max-width: 600px;
+	max-width: 1100px;
 	margin: 10px auto;
-	background-color: white;
+	/*background-color: white; */
 	padding: 20px 30px;
 }
 
@@ -29,6 +37,45 @@ p {
 }
 
 /* Forms */
+#search {
+font-size: 14px;
+}
+
+#submit {
+padding: 10px 20px 11px ;
+font-size: 12px !important;
+background-color:	#d1d5d6;
+font-weight: bold;
+text-shadow: 1px 1px #d1d5d6;
+color: #2d525d;
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: 1px solid #d1d5d6;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+#submit:hover {
+padding: 10px 20px 11px !important;
+font-size: 12px !important;
+background-color:	#b6b8b9;
+font-weight: bold;
+text-shadow: 1px 1px #b6b8b9;
+color: #2d525d;
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: 1px solid #b6b8b9;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+
 .form-element {
 	overflow: hidden;
 	padding-bottom: 25px;
@@ -62,7 +109,7 @@ select {
 	/*-webkit-appearance: none;
     -moz-appearance: none;*/
     border-radius: 0px;
-    background: white;
+    /*background: white; */
     padding: 5px;
     width: 100%;
 }
@@ -86,3 +133,28 @@ select {
 li {
 	list-style-position: inside;
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    white-space: nowrap; 
+} 
+
+th, td {
+    padding: 15px;
+} 
+
+th {
+    text-align: left;
+} 
+
+table {
+    table-layout: auto;
+    border-spacing: 5px;
+    width: 100%;
+} 
+
+table .absorbing-column {
+    width: 100%;
+}
+

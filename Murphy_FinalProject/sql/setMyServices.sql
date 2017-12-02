@@ -1,0 +1,1 @@
+insert into ptt_user_services (service_name, userid) values (:service_name,:userid)

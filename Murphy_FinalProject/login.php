@@ -4,7 +4,7 @@
 include('config.php');
 
 // Include functions for application
-include('functions.php');
+//include('functions.php');
 
 // If form submitted:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$user = $users[0];
 		
 		// Set a session variable with a key of userID equal to the userID returned
-		$_SESSION['userID'] = $user['userid'];
+		$_SESSION['userid'] = $user['userid'];
 		
 		// Redirect to the index.php file
 		header('location: index.php');
@@ -42,7 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
 	<meta charset="utf-8">
 	
-  	<title>Login</title>
+	<img src="Images/MTS_Logo.JPG" width=180px height=150px style="float:left">
+    <title>Login</title>
 	<meta name="description" content="The HTML5 Herald">
 	<meta name="author" content="SitePoint">
 
@@ -58,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<form method="POST">
 			<input type="text" name="username" placeholder="Username" />
 			<input type="password" name="password" placeholder="Password" />
-			<input type="submit" value="Log In" />
+			<input type="submit" value="Log In"  id="submit"/>
 		</form>
 	</div>
 </body>
